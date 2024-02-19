@@ -1,7 +1,7 @@
 ﻿using Cinemachine;
 using UnityEngine;
 
-namespace _Project.Scripts.Camera
+namespace _Project.Scripts.FreeLookCamera
 {
     [RequireComponent(typeof(CinemachineFreeLook))]
     public class FreeLookInput : MonoBehaviour

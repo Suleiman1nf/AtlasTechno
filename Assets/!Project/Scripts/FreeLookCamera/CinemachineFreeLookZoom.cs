@@ -2,11 +2,11 @@
 using Cinemachine;
 using UnityEngine;
 
-namespace _Project.Scripts.Camera
+namespace _Project.Scripts.FreeLookCamera
 {
     [SaveDuringPlay]
     [RequireComponent(typeof(CinemachineFreeLook))]
-    class CinemachineFreeLookZoom : MonoBehaviour
+    public class CinemachineFreeLookZoom : MonoBehaviour
     {
         public CinemachineFreeLook.Orbit[] originalOrbits = Array.Empty<CinemachineFreeLook.Orbit>();
 

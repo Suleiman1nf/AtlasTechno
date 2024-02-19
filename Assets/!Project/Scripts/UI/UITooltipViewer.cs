@@ -1,10 +1,11 @@
+using _Project.Scripts.ToolTip;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
 namespace _Project.Scripts.UI
 {
-    public class UITooltip : MonoBehaviour, ITooltip
+    public class UITooltipViewer : MonoBehaviour, ITooltipViewer
     {
         private const float FADE_DURATION = 0.5f;
         

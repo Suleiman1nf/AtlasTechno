@@ -1,6 +1,6 @@
-﻿namespace _Project.Scripts.UI
+﻿namespace _Project.Scripts.ToolTip
 {
-    public interface ITooltip
+    public interface ITooltipViewer
     {
         public void Show(string text);
         public void Hide();
