@@ -1,4 +1,5 @@
-﻿using Cinemachine;
+﻿using _Project.Scripts.Utils;
+using Cinemachine;
 using UnityEngine;
 
 namespace _Project.Scripts.FreeLookCamera
@@ -20,7 +21,7 @@ namespace _Project.Scripts.FreeLookCamera
 
         private void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && !Utilities.IsPointerOverUIObject())
             {
                 _freeLookCamera.m_XAxis.m_InputAxisValue = Input.GetAxis(_xAxisName);
                 _freeLookCamera.m_YAxis.m_InputAxisValue = Input.GetAxis(_yAxisName);

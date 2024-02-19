@@ -1,4 +1,6 @@
+using _Project.Scripts.Core;
 using UnityEngine;
+using Zenject;
 
 namespace _Project.Scripts.Gameplay
 {
@@ -15,12 +17,20 @@ namespace _Project.Scripts.Gameplay
         [SerializeField] private Transform _fanModel;
         [SerializeField] private float _fanSpeed;
         [SerializeField] private float _fanAcceleration;
+
+        private GameSettings _gameSettings;
         
         private bool _fanEnabled;
         private float _fanCurrentSpeed;
         private bool _hingeEnabled;
 
         private AudioSource _audioSource;
+
+        [Inject]
+        private void Construct(GameSettings gameSettings)
+        {
+            _gameSettings = gameSettings;
+        }
 
         private void Awake()
         {
@@ -47,13 +57,23 @@ namespace _Project.Scripts.Gameplay
             _fanEnabled = !_fanEnabled;
         }
 
+        public void ChangeFanMaxSpeed(float val)
+        {
+            _fanSpeed = val;
+        }
+
+        public void ChangeHingeMaxSpeed(float val)
+        {
+            _hingeSpeed = val;
+        }
+
         private void RotateFan()
         {
             _fanCurrentSpeed += (_fanEnabled ? _fanAcceleration : -_fanAcceleration) * Time.deltaTime;
             _fanCurrentSpeed = Mathf.Clamp(_fanCurrentSpeed, 0, _fanSpeed);
             
             _fanModel.localEulerAngles += Vector3.forward * (_fanCurrentSpeed * Time.deltaTime);
-            _audioSource.volume = _audioCurve.Evaluate(_fanCurrentSpeed / _fanSpeed);
+            _audioSource.volume = _audioCurve.Evaluate(_fanCurrentSpeed / _gameSettings.MaxFanSpeed);
         }
 
         private void RotateHinge()
