@@ -26,16 +26,16 @@ namespace _Project.Scripts
             {
                 RotateHinge();
             }
+        }
 
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                _fanEnabled = !_fanEnabled;
-            }
+        public void ToggleHinge()
+        {
+            _hingeEnabled = !_hingeEnabled;
+        }
 
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                _hingeEnabled = !_hingeEnabled;
-            }
+        public void ToggleFan()
+        {
+            _fanEnabled = !_fanEnabled;
         }
 
         private void RotateFan()
