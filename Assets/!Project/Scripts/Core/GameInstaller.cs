@@ -1,3 +1,4 @@
+using _Project.Scripts.OutlineService;
 using _Project.Scripts.Selection;
 using _Project.Scripts.ToolTip;
 using Zenject;
@@ -10,6 +11,7 @@ namespace _Project.Scripts.Core
         {
             Container.Bind<SceneContentProvider>().FromComponentInHierarchy().AsSingle().NonLazy();
             SelectServiceInstaller.Install(Container);
+            OutlineServiceInstaller.Install(Container);
             ToolTipServiceInstaller.Install(Container);
         }
     }

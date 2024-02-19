@@ -57,6 +57,11 @@ namespace _Project.Scripts.Selection
         private void Deselect(ISelectable selectable)
         {
             OnDeselect?.Invoke(selectable);
+            
+            if (selectable == null)
+            {
+                return;
+            }
             if (selectable == _lastSelectable)
             {
                 _lastSelectable = null;
