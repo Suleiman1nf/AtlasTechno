@@ -8,11 +8,10 @@ namespace _Project.Scripts.Gameplay
     {
         private const float ANIMATION_DURATION = 0.1f;
         private const float CLICK_Y_SCALE = 0.1f;
-        
-        [SerializeField] private Transform _model;
-        [Space(20)]
+
         public UnityEvent onClick;
-        
+        [SerializeField] private Transform _model;
+
         private float _startYScale;
         private bool _enabled;
         private bool _isPressed;

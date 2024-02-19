@@ -4,6 +4,7 @@ namespace _Project.Scripts.Gameplay
 {
     public class Fan : MonoBehaviour
     {
+        [SerializeField] private AnimationCurve _audioCurve;
         [Header("Hinge")]
         [SerializeField] private Transform _hingeModel;
         [SerializeField] private float _hingeSpeed;
@@ -17,6 +18,13 @@ namespace _Project.Scripts.Gameplay
         private bool _fanEnabled = true;
         private float _fanCurrentSpeed;
         private bool _hingeEnabled;
+
+        private AudioSource _audioSource;
+
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
 
         public void Update()
         {
@@ -44,6 +52,7 @@ namespace _Project.Scripts.Gameplay
             _fanCurrentSpeed = Mathf.Clamp(_fanCurrentSpeed, 0, _fanSpeed);
             
             _fanModel.localEulerAngles += Vector3.forward * (_fanCurrentSpeed * Time.deltaTime);
+            _audioSource.volume = _audioCurve.Evaluate(_fanCurrentSpeed / _fanSpeed);
         }
 
         private void RotateHinge()

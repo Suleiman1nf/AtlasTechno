@@ -1,3 +1,4 @@
+using _Project.Scripts.Core.Audio;
 using _Project.Scripts.OutlineService;
 using _Project.Scripts.Selection;
 using _Project.Scripts.ToolTip;
@@ -10,6 +11,7 @@ namespace _Project.Scripts.Core
         public override void InstallBindings()
         {
             Container.Bind<SceneContentProvider>().FromComponentInHierarchy().AsSingle().NonLazy();
+            AudioServiceInstaller.Install(Container);
             SelectServiceInstaller.Install(Container);
             OutlineServiceInstaller.Install(Container);
             ToolTipServiceInstaller.Install(Container);

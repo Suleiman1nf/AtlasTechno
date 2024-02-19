@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4401809324283418040}
   - component: {fileID: 6980937005361710990}
   - component: {fileID: 7059878255649716838}
+  - component: {fileID: 4105712420784937130}
   m_Layer: 0
   m_Name: ButtonHinge
   m_TagString: Untagged
@@ -161,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75775b6147df63498466d63fdd85827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 1098097238382265930}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -177,6 +177,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4105712420784937130}
+        m_TargetAssemblyTypeName: _Project.Scripts.Core.Audio.ButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _model: {fileID: 1098097238382265930}
 --- !u!65 &6980937005361710990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211,6 +224,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Control Hinge
+--- !u!114 &4105712420784937130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822241612193621012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1319402ade4471a7d6cdea50826cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3038611076719478285
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +248,7 @@ GameObject:
   - component: {fileID: 6752603679730981641}
   - component: {fileID: 8680433581487351787}
   - component: {fileID: 7810133402739330747}
+  - component: {fileID: 1391587695718186125}
   m_Layer: 0
   m_Name: ButtonFan
   m_TagString: Untagged
@@ -258,7 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75775b6147df63498466d63fdd85827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 6797992458668587491}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -274,6 +299,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1391587695718186125}
+        m_TargetAssemblyTypeName: _Project.Scripts.Core.Audio.ButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _model: {fileID: 6797992458668587491}
 --- !u!65 &8680433581487351787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -308,6 +346,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Control Fan
+--- !u!114 &1391587695718186125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038611076719478285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1319402ade4471a7d6cdea50826cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3278785785648538211
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +537,7 @@ GameObject:
   - component: {fileID: 8660538694185695769}
   - component: {fileID: 6905317058618478291}
   - component: {fileID: 6090845123680690521}
+  - component: {fileID: 3053719556578071584}
   m_Layer: 0
   m_Name: Fan
   m_TagString: Untagged
@@ -576,6 +627,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d86b3235a6a1d4185a3100ed2d6b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.89436334
+      value: 0.33281705
+      inSlope: 1.3343415
+      outSlope: 1.3343415
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.04604881
+      outWeight: 0.33486468
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 15.283738
+      outSlope: 15.283738
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.0721722
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _hingeModel: {fileID: 1316658043228634550}
   _hingeSpeed: 100
   _minHingeAngle: -45
@@ -583,6 +667,102 @@ MonoBehaviour:
   _fanModel: {fileID: 5215128179919419573}
   _fanSpeed: 1000
   _fanAcceleration: 300
+--- !u!82 &3053719556578071584
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959695979881819910}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ae8dd9f513590a34b91bdfbe6953fec5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5464154518805129664
 GameObject:
   m_ObjectHideFlags: 0
