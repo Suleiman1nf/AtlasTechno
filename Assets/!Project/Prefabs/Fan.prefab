@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 7059878255649716838}
   - component: {fileID: 4105712420784937130}
   m_Layer: 0
-  m_Name: ButtonHinge
+  m_Name: ButtonBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f90c9749e141079313714ea4234d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Control Hinge
+  text: Control Body
 --- !u!114 &4105712420784937130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 3719232192215477338}
   - component: {fileID: 4291489236028991324}
   m_Layer: 0
-  m_Name: buttonHinge
+  m_Name: buttonBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _hingeModel: {fileID: 1316658043228634550}
+  _hingeModel: {fileID: 8195309549074448150}
   _hingeSpeed: 30
   _minHingeAngle: -45
   _maxHingeAngle: 45

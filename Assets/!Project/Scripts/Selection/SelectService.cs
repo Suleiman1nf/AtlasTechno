@@ -41,6 +41,13 @@ namespace _Project.Scripts.Selection
                     Deselect(_lastSelectable);
                 }
             }
+            else
+            {
+                if (_lastSelectable != null)
+                {
+                    Deselect(_lastSelectable);
+                }
+            }
         }
 
         private void Select(ISelectable selectable)
