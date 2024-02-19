@@ -661,7 +661,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _hingeModel: {fileID: 1316658043228634550}
-  _hingeSpeed: 100
+  _hingeSpeed: 30
   _minHingeAngle: -45
   _maxHingeAngle: 45
   _fanModel: {fileID: 5215128179919419573}
@@ -723,7 +723,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

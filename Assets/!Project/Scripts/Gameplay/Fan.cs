@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace _Project.Scripts.Gameplay
 {
+    [RequireComponent(typeof(AudioSource))]
     public class Fan : MonoBehaviour
     {
         [SerializeField] private AnimationCurve _audioCurve;
@@ -15,7 +16,7 @@ namespace _Project.Scripts.Gameplay
         [SerializeField] private float _fanSpeed;
         [SerializeField] private float _fanAcceleration;
         
-        private bool _fanEnabled = true;
+        private bool _fanEnabled;
         private float _fanCurrentSpeed;
         private bool _hingeEnabled;
 
